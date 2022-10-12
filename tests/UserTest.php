@@ -41,4 +41,18 @@ class UserTest extends TestCase
         $this->assertEquals("Boris", $this->user->getFirstname());
         $this->assertEquals("Johnsonuk", $this->user->getLastname());
     }
+
+    public function testBirthdate()
+    {
+        $this->user->setBirthdate("2000-01-01");
+
+        $this->assertEquals("2000-01-01", $this->user->getBirthdate());
+    }
+
+    public function testBirthdateYear()
+    {
+        $this->user->setBirthdate("2000-01-01");
+
+        $this->assertEquals(2000, $this->user->getBirthdateYear());
+    }
 }
